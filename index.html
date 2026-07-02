@@ -833,5 +833,48 @@
 
 </style>
 
+<style>
+/* 📱 MOBİL UYUMLULUK AYARLARI (Ekran genişliği 768px ve altı için geçerli) */
+@media (max-width: 768px) {
+    
+    /* Yan yana duran tüm kart yapılarını alt alta sıralar */
+    .egitim-alani, .ust-cerceve, .kapsayici-ana-div, [class*="konteyner"] {
+        display: flex !important;
+        flex-direction: column !important; /* Kartları yan yana değil alt alta dizer */
+        width: 100% !important;            /* Ekranı tam kaplamasını sağlar */
+        max-width: 100% !important;
+        padding: 15px !important;          /* Mobilde taşma yapmasın diye iç boşluk */
+        box-sizing: border-box !important;
+    }
+
+    /* Eğitim kartlarının (Ankara Üniversitesi yazan o iki büyük beyaz kartın) mobildeki genişliği */
+    .ust-cerceve {
+        width: 100% !important;
+        margin-bottom: 20px !important;    /* Alt alta gelince aralarında boşluk bırakır */
+    }
+
+    /* Üst taraftaki özet biyografi metninin mobildeki hizası */
+    .ozet-metin, p {
+        font-size: 14px !important;        /* Küçük ekranlarda okunabilir ideal yazı boyutu */
+        line-height: 1.6 !important;
+        text-align: justify !important;    /* Yazıları sağa ve sola şıkça yaslar */
+    }
+
+    /* Logoların kartın en sağ köşesinde sabit kalması için */
+    .uni-logo-kose {
+        top: 15px !important;
+        right: 15px !important;
+        width: 32px !important;            /* Mobilde biraz daha kibar dursun */
+    }
+    
+    /* İletişim (Bana Ulaşın) formunun mobilde ekranı taşırmaması için */
+    .iletisim-konteyner {
+        width: 95% !important;
+        margin: 20px auto !important;
+        padding: 20px !important;
+    }
+}
+</style>
+
 </body>
 </html>
