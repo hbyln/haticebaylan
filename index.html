@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hatice Baylan</title>
     <meta charset="UTF-8">
     <meta name="title" content= "Hatice Baylan">
@@ -531,7 +532,7 @@
     
 <hr style="width: 200%; margin: 20px auto; border: none; height: 1px; background-color: #ccc;"><br>
 
-<p style="text-align: start; font-weight: 400; font-size: 14px; color: #666; letter-spacing: 2px; margin-bottom: 5px; font-weight: bold; text-transform: uppercase;">Çalışmalar</p><br><br><br>
+<p style="text-align: center !important; font-weight: 400; font-size: 14px; color: #666; letter-spacing: 2px; margin-bottom: 5px; font-weight: bold; text-transform: uppercase;">Çalışmalar</p><br><br><br>
 
 <style>
 
@@ -599,10 +600,9 @@
 
 <p style="text-align: center; font-weight: 400; font-size: 14px; color: #666; letter-spacing: 2px; margin-bottom: 5px; font-weight: bold; text-transform: uppercase;">Hizmetler</p><br><br>
 
-<p style="text-align: center; font-size: 15px; color: #222; margin: 0 auto; padding: 0 10px; max-width: 800px; line-height: 1.7; font-weight: 500; font-size: 17px;">
-   Üniversite Kimya özel derslerinin yanı sıra, organik analiz (FTIR, NMR, MS) spektroskopik veriler ve akademik süreçler konusunda rehberlik ve profesyonel destek sunuyorum. 
-
-
+<p style="text-align: center !important; font-size: 15px; color: #222; margin: 0 auto; padding: 0 10px; max-width: 800px; line-height: 1.6;">
+    Üniversite Kimya özel derslerinin yanı sıra, organik analiz (FTIR, NMR, MS) spektroskopik veriler ve akademik süreçlerde  rehberlik ve profesyonel destek sunuyorum. 
+</p>
 
 
 
@@ -802,46 +802,35 @@
 </style>
 
 <style>
-/* 📱 MOBİL UYUMLULUK AYARLARI (Ekran genişliği 768px ve altı için geçerli) */
+/* 📱 GENEL MOBİL AYARLARI (768px ve altı telefonlar için) */
 @media (max-width: 768px) {
     
-    /* Yan yana duran tüm kart yapılarını alt alta sıralar */
-    .egitim-alani, .ust-cerceve, .kapsayici-ana-div, [class*="konteyner"] {
+    /* Yan yana duran ana blokları alt alta çevirir ve sıfırlar */
+    .kapsayici-ana-div, .ust-cerceve, [class*="konteyner"], .egitim-alani {
         display: flex !important;
-        flex-direction: column !important; /* Kartları yan yana değil alt alta dizer */
-        width: 100% !important;            /* Ekranı tam kaplamasını sağlar */
+        flex-direction: column !important; /* Her şeyi alt alta dizer */
+        width: 100% !important;
         max-width: 100% !important;
-        padding: 15px !important;          /* Mobilde taşma yapmasın diye iç boşluk */
+        padding: 10px !important;
+        box-sizing: border-box !important;
+        text-align: center !important; /* Mobilde yazıları ortalar */
+    }
+
+    /* Kartların mobilde kutudan taşmasını önler, jilet gibi hizalar */
+    .ust-cerceve, .kart, .blog-kart {
+        width: 100% !important;
+        margin: 10px 0 !important;
         box-sizing: border-box !important;
     }
 
-    /* Eğitim kartlarının (Ankara Üniversitesi yazan o iki büyük beyaz kartın) mobildeki genişliği */
-    .ust-cerceve {
-        width: 100% !important;
-        margin-bottom: 20px !important;    /* Alt alta gelince aralarında boşluk bırakır */
-    }
-
-    /* Üst taraftaki özet biyografi metninin mobildeki hizası */
-    .ozet-metin, p {
-        font-size: 14px !important;        /* Küçük ekranlarda okunabilir ideal yazı boyutu */
-        line-height: 1.6 !important;
-        text-align: justify !important;    /* Yazıları sağa ve sola şıkça yaslar */
-    }
-
-    /* Logoların kartın en sağ köşesinde sabit kalması için */
-    .uni-logo-kose {
-        top: 15px !important;
-        right: 15px !important;
-        width: 32px !important;            /* Mobilde biraz daha kibar dursun */
-    }
-    
-    /* İletişim (Bana Ulaşın) formunun mobilde ekranı taşırmaması için */
-    .iletisim-konteyner {
-        width: 95% !important;
-        margin: 20px auto !important;
-        padding: 20px !important;
+    /* Yazıların sola kaymasını engelleyip ortalayan kesin komut */
+    h1, h2, h3, p, .ozet-metin {
+        text-align: center !important; 
+        font-size: 15px !important;
+        line-height: 1.5 !important;
     }
 }
+
 </style>
 
 </body>
