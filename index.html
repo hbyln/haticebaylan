@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Hatice Baylan</title>
+    <meta charset="UTF-8">
+    <meta name="title" content= "Hatice Baylan">
+    <meta name="keywords" content= "organik kimya, kimya, bilimsel yazim, proje danismnaligi, organik spektroskopi, akademik danismanlik,egitim">
+    <meta name= "description" content= "Temel kimya, Organik Kimya özel ders ve akademik danişmanlik">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<nav class="ust-menu">
+    
+    <div class="menu-sol">
+        <i class="fa-solid fa-ellipsis-vertical" id="blog-uc-nokta-butonu" style="cursor: pointer; padding: 5px;"></i>
+        
+        <div class="dropdown-blog-kart" id="blog-dropdown">
+            <div class="blog-mini-baslik">BLOG</div>
+           <a href="https://bilimgenc.tubitak.gov.tr/makale/mavi-isik-uykuyu-nasil-etkiliyor" target="_blank" class="blog-akademik-satir">
+        <div class="akademik-sol-ikon">
+            <i class="fa-solid fa-flask"></i>
+        </div>
+        <div class="akademik-sag-metin">
+            <span class="akademik-yil"> TÜBİTAK Bilim Genç |  Mavi Işık Uykuyu Nasıl Etkiler?</span>
+        </div>
+    </a>
+                <a href="https://medium.com/@bylnhtc3" target="_blank" class="blog-akademik-satir">
+        <div class="akademik-sol-ikon" style="color: #ffca28;">
+            <i class="fa-solid fa-vial"></i>
+        </div>
+        <div class="akademik-sag-metin">
+            <span class="akademik-yil"> Medium | Yazılarım </span>
+             </div>
+    </a>
+           
+        </div>
+    </div>
+    
+    <div class="menu-orta">
+        <span class="menu-isim">Hatice Baylan</span>
+    </div>
+    
+    <div class="menu-sag">
+        <i class="fa-solid fa-ellipsis-vertical" id="uc-nokta-butonu" style="margin-left: 15px; cursor: pointer; padding: 5px;"></i>
+        
+        <div class="dropdown-spotify-kart" id="spotify-dropdown">
+            <a href="https://open.spotify.com/user/y%C4%B1ld%C4%B1z1564193?si=AvL8bYeiS5yDq6x-t8GLgA" target="_blank" style="text-decoration: none; display: block; height: 100%;">
+                <div class="spotify-kart-icerik">
+                    <div class="spotify-sol">
+                        <i class="fab fa-spotify spotify-icon"></i>
+                        <h3 class="spotify-baslik">Listen My Spotify<br>Playlist</h3>
+                    </div>
+                    <div class="spotify-sag-albumler">
+                        <img src="WhatsApp Image 2026-07-02 at 16.56.53.jpeg" class="album-kapak kapak-1" alt="Album">
+                        <img src="WhatsApp Image 2026-07-02 at 16.57.20.jpeg" class="album-kapak kapak-2" alt="Album">
+                        <img src="WhatsApp Image 2026-07-02 at 16.57.09.jpeg" class="album-kapak kapak-3" alt="Album">
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</nav>
+
+<style>
+
+
+
+/* Sol taraftaki ikon kutusunun ayarları */
+.akademik-sol-ikon {
+    width: 40px !important;
+    height: 40px !important;
+    background-color: #3d3d3d !important; /* İkonun arkasına hafif gri bir yuvarlak kutu */
+    border-radius: 50% !important;        /* Tam yuvarlak yapar */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;             /* Kutunun küçülmesini engeller */
+    color: hsl(200, 83%, 58%) !important;             /* Varsayılan ikon rengi (Mavi) */
+    font-size: 16px !important;
+}
+
+/* Her bir satırın esnek (flex) düzeni */
+.blog-akademik-satir {
+    display: flex !important;
+    gap: 12px !important;               /* İkon ile yazı arasındaki şık boşluk */
+    align-items: center !important;
+    text-decoration: none !important;
+    padding: 8px !important;
+    border-radius: 8px !important;
+    margin-bottom: 6px !important;
+    transition: background 0.2s ease !important;
+}
+
+.blog-akademik-satir:hover {
+    background-color: #646161c3 !important;
+}
+
+/* Sağ taraftaki metinlerin yerleşimi */
+.akademik-sag-metin {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+    text-align: left !important;
+}
+
+.akademik-yil {
+    color: #e2e8f0 !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    opacity: 0.85 !important;
+}
+
+.akademik-baslik {
+    color: #ffffff !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+}
+
+/* Mouse ile üzerine gelince başlığın parlaması */
+.blog-akademik-satir:hover .akademik-baslik {
+    color: #007bff !important;
+}
+/* Ana Navbar Kutusu Düzeni */
+.ust-menu {
+    display: grid !important;
+    grid-template-columns: 80px 1fr 80px !important; /* Sağ ve sol sütunları eşitleyerek ortayı milimetrik kilitler */
+    align-items: center !important;
+    max-width: 850px !important;
+    width: 95% !important;
+    margin: 20px auto !important;
+    padding: 12px 24px !important;
+    background-color: #ffffff !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+}
+
+.menu-sol { display: flex !important; justify-content: flex-start !important; align-items: center !important; }
+.menu-orta { display: flex !important; justify-content: center !important; align-items: center !important; }
+.menu-sag { display: flex !important; justify-content: flex-end !important; align-items: center !important; }
+
+.menu-isim {
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    color: #111 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+}
+
+/* 📝 BLOG AÇILIR KARTI STİLLERİ */
+.dropdown-blog-kart {
+    display: none;
+    position: absolute !important;
+    top: 65px !important; 
+    left: 0 !important; 
+    width: 420px !important;    
+    background-color: #0d1117 !important; /* YENİ RENK */
+    border-radius: 14px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+    z-index: 99999 !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
+    border: 1px solid #21262d !important; /* YENİ ÇERÇEVE CHROME TRON */
+}
+
+.blog-mini-baslik {
+    color: #ffffff !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 12px !important;
+    text-transform: uppercase !important;
+    opacity: 0.8 !important;
+    text-align: left !important;
+}
+
+.diger-yazi-satiri {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    padding: 8px 6px !important;
+    border-radius: 6px !important;
+    transition: background 0.2s ease !important;
+}
+.diger-yazi-satiri:hover {
+    background-color: #3d3d3d !important;
+    color: #007bff !important;
+}
+
+/* 🎵 SPOTIFY AÇILIR KARTI STİLLERİ */
+.dropdown-spotify-kart {
+    display: none;
+    position: absolute !important;
+    top: 65px !important; 
+    right: 0 !important; 
+    width: 360px !important;
+    height: 130px !important;
+    background-color: #000000 !important;
+    border-radius: 14px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
+    z-index: 99999 !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
+}
+
+.dropdown-blog-kart.aktif,
+.dropdown-spotify-kart.aktif {
+    display: block !important;
+}
+
+.spotify-kart-icerik { display: flex !important; justify-content: space-between !important; align-items: center !important; height: 100% !important; }
+.spotify-sol { display: flex !important; flex-direction: column !important; justify-content: center !important; gap: 6px !important; height: 100% !important; }
+.spotify-icon { color: #1DB954 !important; font-size: 28px !important; text-align: left !important; }
+.spotify-baslik { color: #ffffff !important; font-size: 16px !important; font-weight: 600 !important; margin: 0 !important; line-height: 1.3 !important; text-align: left !important; }
+.spotify-sag-albumler { position: relative !important; width: 120px !important; height: 100% !important; }
+.album-kapak { width: 55px !important; height: 55px !important; border-radius: 4px !important; object-fit: cover !important; position: absolute !important; box-shadow: 0 4px 10px rgba(0,0,0,0.4) !important; }
+.kapak-1 { top: 5px !important; left: 5px !important; z-index: 1 !important; }
+.kapak-2 { bottom: 5px !important; left: 30px !important; z-index: 3 !important; }
+.kapak-3 { top: 15px !important; right: 5px !important; z-index: 2 !important; }
+</style>
+
+<script>
+    // Element Seçimleri (Hataları önlemek için script bloğu içinde bir kez tanımlandı)
+    (function() {
+        const modButonu = document.getElementById('karanlik-mod-butonu');
+        const ucNoktaButonu = document.getElementById('uc-nokta-butonu');
+        const spotifyDropdown = document.getElementById('spotify-dropdown');
+        const blogUcNoktaButonu = document.getElementById('blog-uc-nokta-butonu');
+        const blogDropdown = document.getElementById('blog-dropdown');
+
+        if(modButonu) {
+            modButonu.addEventListener('click', (e) => {
+                e.stopPropagation();
+                document.body.classList.toggle('dark-mode');
+                if (document.body.classList.contains('dark-mode')) {
+                    modButonu.classList.remove('fa-regular', 'fa-moon');
+                    modButonu.classList.add('fa-solid', 'fa-sun');
+                    modButonu.style.color = '#ffca28';
+                } else {
+                    modButonu.classList.remove('fa-solid', 'fa-sun');
+                    modButonu.classList.add('fa-regular', 'fa-moon');
+                    modButonu.style.color = '';
+                }
+            });
+        }
+
+        if(ucNoktaButonu && spotifyDropdown && blogDropdown) {
+            ucNoktaButonu.addEventListener('click', (e) => {
+                e.stopPropagation();
+                blogDropdown.classList.remove('aktif');
+                spotifyDropdown.classList.toggle('aktif');
+            });
+        }
+
+        if(blogUcNoktaButonu && blogDropdown && spotifyDropdown) {
+            blogUcNoktaButonu.addEventListener('click', (e) => {
+                e.stopPropagation();
+                spotifyDropdown.classList.remove('aktif');
+                blogDropdown.classList.toggle('aktif');
+            });
+        }
+
+        if(spotifyDropdown) spotifyDropdown.addEventListener('click', (e) => e.stopPropagation());
+        if(blogDropdown) blogDropdown.addEventListener('click', (e) => e.stopPropagation());
+
+        document.addEventListener('click', () => {
+            if(spotifyDropdown) spotifyDropdown.classList.remove('aktif');
+            if(blogDropdown) blogDropdown.classList.remove('aktif');
+        });
+    })();
+</script>
+<!-- 2. BÜYÜK KARŞILAMA VE ETİKETLER -->
+<header class="karsilama-alani">
+    
+    <div class="etiket-satiri">
+        <span class="konum-etiket">📍 Ankara, Türkiye</span>
+        <div class="dikey-cizgi"></div>
+     <span class="durum-etiket">
+    <span class="canli-nokta"></span> Özel Ders & Danışmanlık için uygun
+</span>
+    </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+.etiket-satiri {
+    display: flex !important;
+    justify-content: center !important; /* Yatayda tam ortalar */
+    align-items: center !important;     /* Dikeyde tam hizalar */
+    gap: 15px;
+    margin: 15px auto 0 auto;
+    width: 100%;                        /* Tüm ekran genişliğini kapsayarak ortalamayı kesinleştirir */
+    box-sizing: border-box;
+}
+</style>
+
+<style>
+/* Yeşil oval butonun güncel hali */
+.durum-etiket {
+    font-size: 14px;
+    color: #1e7e34;
+    background-color: #eafaf1; 
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Nokta ile yazı arasındaki boşluk */
+}
+
+/* Yanıp sönen o küçük canlı yeşil nokta */
+.canli-nokta {
+    width: 8px;
+    height: 8px;
+    background-color: #28a745;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+/* Noktanın arkasındaki dalgalanma/nabız efekti (Animasyon burada kuruluyor) */
+.canli-nokta::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #28a745;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: nabiz-efekti 1.8s ease-in-out infinite;
+}
+
+/* Yanıp sönme ve büyüme animasyonunun matematiksel kuralı */
+@keyframes nabiz-efekti {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+ <style>
+.hakkimda {
+    text-align: center;      /* Yazıyı tam olarak ortalar */
+    font-weight: 400;        /* Yazının kalınlığını normal/ince yapar (kalın durmaz) */
+    font-size: 14px;         /* Boyutunu buradan ayarlayabilirsin */
+    color: #666;             /* Rengini hafif gri tonu yaparak daha zarif gösterir */
+    text-transform: uppercase; /* Harfleri büyük yapar */
+    letter-spacing: 2px;     /* Harflerin arasını biraz açarak şık gösterir */
+    margin-bottom: 5px;      /* Altındaki EĞİTİM başlığına olan mesafesi */
+}
+</style>
+
+<br><br><br>
+<p class="ozet-metin" style="max-width: 650px; margin: 0 auto 30px auto; padding: 0 15px; text-align: center; color: #222; text-transform: none; line-height: 1.7; font-weight: 500; font-size: 17px;">
+    Organik Kimya Anabilim Dalı'nda yüksek lisans eğitimime devam etmekteyim. Deneysel süreçlerin teorik temellerini anlamlandırmak ve moleküler sistemlerin modellenmesini daha iyi kavrayabilmek adına, hesaplamalı kimya ile çalışmalarımı destekliyorum. Akademideki dijital dönüşüme odaklanarak; yapay zeka araçlarını literatür taraması, akademik yazım ve kimyasal veri analiz süreçlerime entegre ederek, yenilikçi ve verimli araştırmalar üretmeyi hedefliyorum.
+</p>
+  <hr style="width: 60%; margin: 20px auto; border: none; height: 1px; background-color: #ccc;">
+<br><br><br>
+
+<p style="text-align: center; font-weight: 800; font-size: 14px; color: #666; letter-spacing: 2px; margin-bottom: 5px; font-weight: bold;">EĞİTİM</p><br>
+<style>
+
+.egitim-alani {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Kutuları otomatik yan yana dizer ve sığdırır */
+    gap: 20px; /* Kartların arasındaki boşluk */
+    max-width: 900px; /* Toplam alanın genişliği */
+    margin: 30px auto; /* Sayfada ortalama */
+    padding: 0 15px;
+}
+
+/* Küçültülmüş, soluk ve hareketli yeni çerçeve (kart) yapısı */
+.ust-cerceve {
+    border: 1px solid rgba(200, 200, 200, 0.4); /* Soluk ince çerçeve */
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); /* Çok hafif modern bir gölge */
+    
+    /* Seninki gibi yavaşça parlayan nefes alma animasyonu */
+    animation: cerceve-nefes 4s ease-in-out infinite;
+}
+
+@keyframes cerceve-nefes {
+    0% { border-color: rgba(200, 200, 200, 0.4); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); }
+    50% { border-color: hsl(0, 0%, 0%); box-shadow: 0 4px 15px rgba(255, 87, 34, 0.08); }
+    100% { border-color: rgba(200, 200, 200, 0.4); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); }
+}
+
+/* Başlık ve logonun yan yana bitişik durması için */
+.kapsayici-kutu {
+    display: flex !important;
+    justify-content: flex-start; /* Sola bitişik */
+    align-items: center; /* Dikeyde ortala */
+    gap: 12px; /* Yazı ile logo arasındaki küçük mesafe */
+    margin-bottom: 15px;
+}
+
+.kapsayici-kutu h4 {
+    margin: 0;
+    font-size: 18px; /* Kart içine sığması için başlığı biraz küçülttük */
+    color: #222;
+}
+
+.ozet-metin {
+    line-height: 1.6;
+    color: #555;
+    font-size: 14px; 
+    margin: 0 0 15px 0;
+
+}
+
+
+/* Hareketli çizgi stili (kartın en altında şık durması için) */
+.hareketli-cizgi {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+}
+
+.hareketli-cizgi::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -3px;
+    left: 0;
+    background-color: hwb(0 1% 99%);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+}
+
+.hareketli-cizgi:hover::after {
+    transform: scaleX(1);
+}
+</style>
+<div class="egitim-alani">
+<div class="ust-cerceve">
+    
+    <!-- LOGO BURADA: "ust-cerceve"nin hemen içine, diğer her şeyin üstüne ekledik -->
+    <img src="ankara-universitesi-logo-png_seeklogo-306482.png" class="uni-logo-kose" alt="Logo">
+
+    <div class="kapsayici-kutu">
+        <h4>Ankara Üniversitesi <i class="fa-solid fa-vial" style="margin-left: 8px; font-size: 16px;"></i></h4>
+    </div>
+
+    <!-- Yazılar ve içerikler de artık bu ana çerçevenin doğrudan içinde düzgünce sıralanıyor -->
+    <p class="hareketli-cizgi">Lisans, Kimya (2021-2026)</p>
+
+        <p class="ozet-metin">
+            Lisans eğitimim boyunca, Organik Kimya Anabilim Dalı Araştırma Laboratuvarı'nda görev aldım. 
+            TÜBİTAK 2209-A Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı kapsamında desteklenen, 
+            Organik Kimya Anabilim Dalı kapsamında bir araştırma projesinin yürütücülüğünü yapmaktayım.
+        </p>
+
+  
+    </div>
+
+   <div class="ust-cerceve">
+    
+    <!-- YÜKSEK LİSANS LOGOSU: Ana çerçevenin hemen içine, en sağ üst köşeye kilitlenmesi için buraya aldık -->
+    <img src="ankara-universitesi-logo-png_seeklogo-306482.png" class="uni-logo-kose" alt="Logo">
+
+    <div class="kapsayici-kutu">
+        <h4>Ankara Üniversitesi</h4> 
+        <img src="268703.png" alt="benzen" width="25">
+    </div>
+
+    <p class="hareketli-cizgi">Yüksek Lisans, Organik Kimya (2026-)</p>
+
+</div>
+      
+
+    
+<hr style="width: 200%; margin: 20px auto; border: none; height: 1px; background-color: #ccc;"><br>
+
+<p style="text-align: start; font-weight: 400; font-size: 14px; color: #666; letter-spacing: 2px; margin-bottom: 5px; font-weight: bold; text-transform: uppercase;">Çalışmalar</p><br><br><br>
+
+<style>
+
+
+/* Bu kod zaten style etiketlerinin içindeyse yeniden eklemene gerek yok, aynen geçerli olacak */
+.uni-logo-kose {
+    position: absolute !important;
+    top: 14px !important;    /* İlk kartta en son beğendiğin ideal yükseklik payı */
+    right: 24px !important;  /* Sağ köşeden milimetrik hizalama */
+    width: 35px !important;  
+    height: auto !important;
+    z-index: 99 !important;  
+}
+
+/* Logonun sınırını belirleyen ana beyaz kart */
+.ust-cerceve {
+    position: relative !important; /* Logonun sağa fırlaması için bu temel şarttır */
+}
+
+/* Sağ üst köşeye kilitleme kodu */
+.uni-logo-kose {
+    position: absolute !important;
+    top: 15px !important;    /* Beyaz kartın üst çizgisinden bırakılacak pay */
+    right: 24px !important;  /* Beyaz kartın sağ çizgisinden bırakılacak pay (Tam köşeye oturtur) */
+    width: 35px !important;  /* Logonun genişliği */
+    height: auto !important;
+    z-index: 99 !important;  /* Diğer elemanların üstünde kalması için */
+}
+    
+.ust-cerceve {
+    border: 1px solid rgba(200, 200, 200, 0.4); /* Soluk ince çerçeve */
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); /* Çok hafif modern bir gölge */
+    
+    /* Seninki gibi yavaşça parlayan nefes alma animasyonu */
+    animation: cerceve-nefes 4s ease-in-out infinite;
+}
+
+@keyframes cerceve-nefes {
+    0% { border-color: rgba(200, 200, 200, 0.4); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); }
+    50% { border-color: hsl(0, 0%, 0%); box-shadow: 0 4px 15px rgba(255, 87, 34, 0.08); }
+    100% { border-color: rgba(200, 200, 200, 0.4); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); }
+}
+
+
+</style>
+   
+
+ <div class="ust-cerceve">
+        <h4 style="text-emphasis: none;: center; margin-bottom: 10px; color: #222; font-size: 18px;">
+            Yeni Dihidrokromeno[2,3-d]pirimidin Türevlerinin Sentez Reaksiyonlarının İncelenmesi
+        </h4>
+        
+        <p class="hareketli-cizgi" style="text-align: center; margin-bottom: 15px;">Mayıs 2026-</p>
+        
+        <p style="text-emphasis: none; center; font-size: 14px; line-height: 1.6; color: #555; margin: 0; padding: 0 10px;">
+            Organik Kimya Anabilim Dalı bünyesinde; TÜBİTAK 2209-A programı tarafından desteklenen araştırma projemin yürütücülüğünü sürdürmekteyim.
+        </p>
+    </div>
+
+
+</div> <hr style="width: 60%; margin: 20px auto; border: none; height: 1px; background-color: #ccc;">
+
+<p style="text-align: center; font-weight: 400; font-size: 14px; color: #666; letter-spacing: 2px; margin-bottom: 5px; font-weight: bold; text-transform: uppercase;">Hizmetler</p><br><br>
+
+<p style="text-align: center; font-size: 15px; color: #222; margin: 0 auto; padding: 0 10px; max-width: 800px; line-height: 1.7; font-weight: 500; font-size: 17px;">
+    Organik kimya, organik analiz (FTIR, NMR, MS) ve akademik süreçler konusunda profesyonel destek sunuyorum. Üniversite Kimya özel derslerinin yanı sıra, spektroskopik verilerin yorumlanması gibi alanlarda da rehberlik sağlıyorum.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="iletisim-konteyner">
+    <h3>Bana Ulaşın</h3>
+    
+    <!-- formbold linkini kendi ID'nle güncellemeyi unutma -->
+    <form action="https://formbold.com/s/3dJgD" method="POST" id="iletisim-formu">
+        
+        <div class="form-grup">
+            <input type="text" name="name" placeholder="Adınız Soyadınız" required>
+        </div>
+        
+        <div class="form-grup">
+            <input type="email" name="email" placeholder="E-posta Adresiniz" required>
+        </div>
+        
+        <div class="form-grup">
+            <textarea name="message" rows="5" placeholder="Mesajınız..." required></textarea>
+        </div>
+        
+        <button type="submit" class="gonder-butonu" id="form-buton">Gönder</button>
+        
+        <!-- 🎯 FormBold sayfasına gitmek yerine burada görünecek başarı mesajı -->
+        <div id="form-durum" style="display:none; margin-top: 15px; font-size: 14px; font-weight: 500; color: #141414;">
+            Mesajınız başarıyla gönderildi! 
+        </div>
+    </form>
+</div>
+
+<script>
+    var form = document.getElementById("iletisim-formu");
+    var buton = document.getElementById("form-buton");
+    var durum = document.getElementById("form-durum");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // 🎯 FormBold'un kendi sayfasına gitmesini engeller (Sihirli satır)
+        
+        buton.innerHTML = "Gönderiliyor...";
+        buton.disabled = true;
+
+        var data = new FormData(event.target);
+        
+        fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                durum.style.display = "block";
+                durum.innerHTML = "Mesajınız başarıyla iletildi! Teşekkürler. ✨";
+                form.reset(); // Kutuların içini temizler
+                buton.innerHTML = "Gönder";
+                buton.disabled = false;
+            } else {
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        durum.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                    } else {
+                        durum.innerHTML = "Bir hata oluştu, lütfen tekrar deneyin.";
+                    }
+                })
+            }
+        }).catch(error => {
+            durum.innerHTML = "Bir hata oluştu, lütfen tekrar deneyin.";
+        });
+    });
+</script>
+
+<style>
+/* İletişim Alanı Genel Kutusu */
+.iletisim-konteyner {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #dadde1 !important; /* Üst menü ve blog kartınla aynı asil koyu ton */
+    border: 1px solid #21262d !important;  /* Zarif ince çerçeve çizgisi */
+    border-radius: 14px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.iletisim-konteyner h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #111111 !important; 
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.form-grup {
+    margin-bottom: 15px;
+}
+
+/* İnput ve Textarea Alanlarının Şık Karanlık Tasarımı */
+.form-grup input, .form-grup textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #30363d !important;
+    border-radius: 8px !important;
+    background-color: #f1f2f5 !important; /* Kutuların içi biraz daha koyu gri */
+    color: #1b1a1a !important;            /* Yazılan yazılar beyaz olsun */
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+/* Kutunun içine tıklanınca (Focus) sol üst menüdeki ikon mavisinde parlaması için */
+.form-grup input:focus, .form-grup textarea:focus {
+    border-color: #38b6ff !important;
+    box-shadow: 0 0 0 3px rgba(56, 182, 255, 0.15) !important;
+}
+
+/* Gönder Butonu */
+.gonder-butonu {
+    width: 100%;
+    padding: 12px;
+    background-color: #0f0e0e !important; /* Menüdeki canlı mavi tonu butona verdik */
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease !important;
+}
+
+.gonder-butonu:hover {
+    background-color: #1b1b1b !important; /* Üzerine gelince mavinin tonu biraz koyulaşır */
+}
+</style>
+
+
+
+
+
+
+<div class="sosyal-medya-kutusu">
+    <a href="https://instagram.com/htcbylnh" target="_blank" class="sosyal-link insta">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://linkedin.com/in/hatice-baylan-b25ab4235" target="_blank" class="sosyal-link linkedin">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+    
+    <a href="https://github.com/hbyln" target="_blank" class="sosyal-link github">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+    <a href="https://medium.com/@bylnhtc3" target="_blank" class="sosyal-link medium">
+        <i class="fab fa-medium"></i>
+    </a>
+</div>
+
+<style>
+.sosyal-medya-kutusu {
+    display: flex;
+    justify-content: center; /* Logoları yan yana tam ortalar */
+    align-items: center;
+    gap: 25px;               /* Logoların birbirine olan mesafesi */
+    margin: 50px auto 30px auto; /* Üstteki elemanlardan şık bir mesafe bırakır */
+    width: 100%;
+}
+
+/* Logoların genel siyah ve zarif tasarımı */
+.sosyal-link {
+    font-size: 24px;         /* İdeal küçük/zarif logo boyutu */
+    color: #000000;          /* İSTEK: Tamamen siyah renk */
+    transition: all 0.2s ease-in-out; /* Geçişlerin pürüzsüz olması için */
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* FARE ÜZERİNE GELİNDİĞİNDE (HOVER) */
+.sosyal-link:hover {
+    color: #444444;          /* Üzerine gelince hafif tatlı bir koyu griye döner */
+    transform: translateY(-3px); /* Logoyu çok hafif yukarı zıplatır (Portfolyo efekti) */
+}
+</style>
+
+
+
+
+</body>
+</html>
