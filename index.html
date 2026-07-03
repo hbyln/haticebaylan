@@ -38,7 +38,8 @@
     </div>
     
     <div class="menu-orta">
-        <span class="menu-isim">Hatice Baylan</span>
+        <span class="menu-isim">Hatice Baylan</span><i class="fa-solid fa-vial" style="margin-left: 8px; font-size: 16px;"></i>
+        <img src="268703.png" alt="benzen">
     </div>
     
     <div class="menu-sag">
@@ -805,6 +806,23 @@
 <style>
 /* 📱 GENEL MOBİL AYARLARI (768px ve altı telefonlar için) */
 @media (max-width: 768px) {
+
+/* Mobilde logonun sağ köşede jilet gibi çakılı kalmasını sağlar */
+    .uni-logo-kose {
+        position: absolute !important;
+        top: 15px !important;    /* Mobilde kartın üstünden bırakılacak pay */
+        right: 15px !important;  /* Mobilde sağ köşeden bırakılacak pay */
+        width: 30px !important;  /* Mobil ekranda biraz daha kibar dursun diye küçülttük */
+        left: auto !important;   /* Olası sol kayma komutlarını tamamen sıfırlar */
+    }
+
+    /* Kartın içindeki başlığın logoya çarpmaması için sağdan ve soldan güvenli boşluk */
+    .kapsayici-kutu h4 {
+        padding: 0 40px !important; 
+        text-align: center !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
     
     /* Yan yana duran ana blokları alt alta çevirir ve sıfırlar */
     .kapsayici-ana-div, .ust-cerceve, [class*="konteyner"], .egitim-alani {
