@@ -38,8 +38,8 @@
     </div>
     
     <div class="menu-orta">
-        <span class="menu-isim">Hatice Baylan</span><i class="fa-solid fa-vial" style="margin-left: 8px; font-size: 16px;"></i>
-        <img src="268703.png" alt="benzen" width="25">
+        <span class="menu-isim">Hatice Baylan</span>
+    
     </div>
     
     <div class="menu-sag">
@@ -496,37 +496,43 @@
 </style>
 <div class="egitim-alani">
 <div class="ust-cerceve">
-    <div class="ust-cerceve" style="position: relative; padding: 20px; border-radius: 12px; background-color: #ffffff; margin-bottom: 20px; box-sizing: border-box;">
     
-    <img src="ankara-universitesi-logo-png_seeklogo-306482.png" alt="Logo" style="position: absolute !important; top: 15px !important; right: 20px !important; width: 32px !important; height: auto !important; z-index: 99 !important;">
+    <!-- LOGO BURADA: "ust-cerceve"nin hemen içine, diğer her şeyin üstüne ekledik -->
+    <img src="ankara-universitesi-logo-png_seeklogo-306482.png" class="uni-logo-kose" alt="Logo"><i class="fa-solid fa-vial" style="margin-left: 8px; font-size: 16px;"></i>
 
-    <div class="kapsayici-kutu" style="justify-content: center; text-align: center; padding: 0 40px !important; box-sizing: border-box; width: 100%;">
-        <h4 style="font-size: 18px; color: #222; margin: 0 auto; font-weight: bold; text-align: center; width: 100%;">Ankara Üniversitesi</h4>
+    <div class="kapsayici-kutu">
+        <h4>Ankara Üniversitesi </h4>
     </div>
 
-    <p class="hareketli-cizgi" style="text-align: center; display: block; margin: 15px auto 10px auto; width: max-content;">Lisans, Kimya (2021-2026)</p>
-    
-    <p class="ozet-metin" style="text-align: center; font-size: 14px; color: #555; line-height: 1.6; margin: 0;">
-        Lisans eğitimim boyunca, Organik Kimya Anabilim Dalı Araştırma Laboratuvarı'nda görev aldım. 
-        TÜBİTAK 2209-A Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı kapsamında desteklenen, 
-        Organik Kimya Anabilim Dalı kapsamında bir araştırma projesinin yürütücülüğünü yapmaktayım.
-    </p>
-</div>
+    <!-- Yazılar ve içerikler de artık bu ana çerçevenin doğrudan içinde düzgünce sıralanıyor -->
+    <p class="hareketli-cizgi">Lisans, Kimya (2021-2026)</p>
 
-  <div class="ust-cerceve" style="position: relative; padding: 20px; border-radius: 12px; background-color: #ffffff; margin-bottom: 20px; box-sizing: border-box;">
-    
-    <img src="ankara-universitesi-logo-png_seeklogo-306482.png" alt="Logo" style="position: absolute !important; top: 15px !important; right: 20px !important; width: 32px !important; height: auto !important; z-index: 99 !important;">
+        <p class="ozet-metin">
+            Lisans eğitimim boyunca, Organik Kimya Anabilim Dalı Araştırma Laboratuvarı'nda görev aldım. 
+            TÜBİTAK 2209-A Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı kapsamında desteklenen, 
+            Organik Kimya Anabilim Dalı kapsamında bir araştırma projesinin yürütücülüğünü yapmaktayım.
+        </p>
 
-    <div class="kapsayici-kutu" style="justify-content: center; text-align: center; padding: 0 40px !important; box-sizing: border-box; width: 100%;">
-        <h4 style="font-size: 18px; color: #222; margin: 0 auto; font-weight: bold; text-align: center; width: 100%;">Ankara Üniversitesi</h4> 
+  
     </div>
 
-    <p class="hareketli-cizgi" style="text-align: center; display: block; margin: 15px auto 10px auto; width: max-content;">Yüksek Lisans, Organik Kimya (2026-)</p>
+   <div class="ust-cerceve">
+    
+    <!-- YÜKSEK LİSANS LOGOSU: Ana çerçevenin hemen içine, en sağ üst köşeye kilitlenmesi için buraya aldık -->
+    <img src="ankara-universitesi-logo-png_seeklogo-306482.png" class="uni-logo-kose" alt="Logo">
+    <img src="268703.png" width="25">
+    <div class="kapsayici-kutu">
+        <h4>Ankara Üniversitesi</h4> 
+    
+    </div>
+
+    <p class="hareketli-cizgi">Yüksek Lisans, Organik Kimya (2026-)</p>
+
 </div>
       
 
     
-<hr style="width: 200%; margin: 20px auto; border: none; height: 1px; background-color: #ccc;"><br><br>
+<hr style="width: 200%; margin: 20px auto; border: none; height: 1px; background-color: #ccc;"><br>
 
 <p style="text-align: center !important; font-weight: 400; font-size: 14px; color: #666; letter-spacing: 2px; margin-bottom: 5px; font-weight: bold; text-transform: uppercase;">Çalışmalar</p><br>
 
@@ -798,139 +804,16 @@
 </style>
 
 <style>
-/* 📱 GENEL MOBİL AYARLARI (768px ve altı telefonlar için) */
-@media (max-width: 768px) {
-
-/* Mobilde logonun sağ köşede jilet gibi çakılı kalmasını sağlar */
-    .uni-logo-kose {
-        position: absolute !important;
-        top: 15px !important;    /* Mobilde kartın üstünden bırakılacak pay */
-        right: 15px !important;  /* Mobilde sağ köşeden bırakılacak pay */
-        width: 30px !important;  /* Mobil ekranda biraz daha kibar dursun diye küçülttük */
-        left: auto !important;   /* Olası sol kayma komutlarını tamamen sıfırlar */
-    }
-
-    /* Kartın içindeki başlığın logoya çarpmaması için sağdan ve soldan güvenli boşluk */
-    .kapsayici-kutu h4 {
-        padding: 0 40px !important; 
-        text-align: center !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-    
-    /* Yan yana duran ana blokları alt alta çevirir ve sıfırlar */
-    .kapsayici-ana-div, .ust-cerceve, [class*="konteyner"], .egitim-alani {
-        display: flex !important;
-        flex-direction: column !important; /* Her şeyi alt alta dizer */
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 10px !important;
-        box-sizing: border-box !important;
-        text-align: center !important; /* Mobilde yazıları ortalar */
-    }
-
-    /* Kartların mobilde kutudan taşmasını önler, jilet gibi hizalar */
-    .ust-cerceve, .kart, .blog-kart {
-        width: 100% !important;
-        margin: 10px 0 !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Yazıların sola kaymasını engelleyip ortalayan kesin komut */
-    h1, h2, h3, p, .ozet-metin {
-        text-align: center !important; 
-        font-size: 15px !important;
-        line-height: 1.5 !important;
-    }
+*, ::before, ::after {
+    box-sizing: border-box !important;
 }
 
-</style>
-
-<style>
-    /* 📱 GENEL MOBİL AYARLARI (768px ve altı telefonlar için taşmayı önleyen kesin kod) */
-@media (max-width: 768px) {
-    
-    /* Sayfanın sağa kaymasını ve taşmasını kökten engeller */
-    html, body {
-        width: 100% !important;
-        max-width: 100% !important;
-        overflow-x: hidden !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    /* Üst taraftaki etiketlerin (Ankara ve Yeşil kutu) alt alta gelip ortalanmasını sağlar */
-    .etiket-satiri {
-        flex-direction: column !important;
-        gap: 10px !important;
-        width: 100% !important;
-        margin: 15px auto !important;
-        text-align: center !important;
-    }
-
-    .dikey-cizgi {
-        display: none !important; /* Mobilde aradaki dikey çizgiyi gizler */
-    }
-
-    /* Üst menüyü mobil ekrana tam sığdırır */
-    .ust-menu {
-        grid-template-columns: 50px 1fr 50px !important;
-        padding: 10px !important;
-        width: 90% !important;
-    }
-    
-    .dropdown-blog-kart, .dropdown-spotify-kart {
-        width: 290px !important;
-    }
-    
-    /* Eğitim kartlarını ve kapsayıcıları tam genişlik yapıp taşmayı önler */
-    .egitim-alani, .ust-cerceve, [class*="konteyner"] {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 15px !important;
-        box-sizing: border-box !important;
-    }
-
-    .ust-cerceve {
-        margin: 10px 0 !important;
-    }
-
-    /* Sayfadaki tüm ince çizgilerin ekranı sağa ittirmesini engeller */
-    hr {
-        width: 80% !important;
-        max-width: 80% !important;
-        margin: 20px auto !important;
-    }
-
-    /* Yazıların ve başlıkların mobilde jilet gibi ortalanması */
-    h1, h2, h3, h4, p, .ozet-metin {
-        text-align: center !important; 
-        font-size: 15px !important;
-        line-height: 1.6 !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-/* Mobilde resimlerin ve logoların iç içe geçmesini engeller */
-    .ust-cerceve img {
-        position: static !important; /* Eğer absolute verilmişse bunu iptal eder */
-        display: inline-block !important;
-        max-width: 40px !important; /* Logoların mobilde çok devasa olmasını önler */
-        height: auto !important;
-        margin: 5px !important; /* Resimlerin arasına güvenli boşluk bırakır */
-    }
-
-    /* Eğer logoları tutan ayrı bir kutun varsa, mobilde onları alt alta veya düzgünce yan yana dizer */
-    .ust-cerceve div {
-        position: static !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 10px !important;
-        width: 100% !important;
-    }
-
+html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important; 
+    margin: 0 !important;
+    padding: 0 !important;
 }
 </style>
 
