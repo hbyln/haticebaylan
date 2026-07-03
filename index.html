@@ -513,26 +513,27 @@
         </p>
 
   
-
-      
-<div class="ust-cerceve">
-    <!-- Logoların mobilde üst üste binmesini engelleyen güvenli yan yana kutu -->
-    <div style="position: absolute; top: 15px; right: 20px; display: flex; align-items: center; gap: 8px; z-index: 99;">
-        <img src="ankara-universitesi-logo-png_seeklogo-306482.png" alt="Logo" style="width: 30px; height: auto;">
-        <img src="268703.png" alt="benzen" style="width: 25px; height: auto;">
     </div>
+
+   <div class="ust-cerceve">
+    
+    <!-- YÜKSEK LİSANS LOGOSU: Ana çerçevenin hemen içine, en sağ üst köşeye kilitlenmesi için buraya aldık -->
+    <img src="ankara-universitesi-logo-png_seeklogo-306482.png" class="uni-logo-kose" alt="Logo">
 
     <div class="kapsayici-kutu">
         <h4>Ankara Üniversitesi</h4> 
+        <img src="268703.png" alt="benzen" width="25">
     </div>
 
     <p class="hareketli-cizgi">Yüksek Lisans, Organik Kimya (2026-)</p>
+
 </div>
+      
 
     
 <hr style="width: 200%; margin: 20px auto; border: none; height: 1px; background-color: #ccc;"><br>
 
-<p style="text-align: center !important; font-weight: 400; font-size: 14px; color: #666; letter-spacing: 2px; margin-bottom: 5px; font-weight: bold; text-transform: uppercase;">Çalışmalar</p><br>
+<p style="text-align: center !important; font-weight: 400; font-size: 14px; color: #666; letter-spacing: 2px; margin-bottom: 5px; font-weight: bold; text-transform: uppercase;">Çalışmalar</p><br><br><br>
 
 <style>
 
@@ -817,14 +818,10 @@
     }
 
     /* Kartların mobilde kutudan taşmasını önler, jilet gibi hizalar */
-    /* Sitenin tüm içeriğini saran ana çerçeve/konteyner sınıfı hangisiyse onu bulun */
-.ust-cerceve { /* Eğer sınıf adı farklıysa burayı kendi sınıfınla değiştir kanka */
-    width: 100% !important;
-    max-width: 650px !important; /* Sitenin masaüstünde maksimum ne kadar geniş olacağını belirler, ideali budur */
-    margin: 0 auto !important; /* 🌟 İŞTE SİHRİ YAPAN SATIR: Sağı ve solu otomatik eşitleyerek içeriği HER ekranda tam ortalar */
-    box-sizing: border-box !important;
-    padding: 20px !important; /* Kenarlardan taşmayı önlemek için iç boşluk */
-
+    .ust-cerceve, .kart, .blog-kart {
+        width: 100% !important;
+        margin: 10px 0 !important;
+        box-sizing: border-box !important;
     }
 
     /* Yazıların sola kaymasını engelleyip ortalayan kesin komut */
