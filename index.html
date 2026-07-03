@@ -503,33 +503,32 @@
         <h4>Ankara Üniversitesi <i class="fa-solid fa-vial" style="margin-left: 8px; font-size: 16px;"></i></h4>
     </div>
 
- <div class="ust-cerceve" style="position: relative; padding: 20px; border-radius: 12px; background-color: #ffffff; margin-bottom: 20px;">
-    
-    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; width: 100%;">
-        <img src="ankara-universitesi-logo-png_seeklogo-306482.png" alt="Logo" style="width: 30px; height: auto; flex-shrink: 0;">
-        <h4 style="font-size: 18px; color: #222; margin: 0; font-weight: bold; text-align: center;">Ankara Üniversitesi</h4>
-        <i class="fa-solid fa-vial" style="font-size: 16px; color: #666; flex-shrink: 0;"></i>
+    <!-- Yazılar ve içerikler de artık bu ana çerçevenin doğrudan içinde düzgünce sıralanıyor -->
+    <p class="hareketli-cizgi">Lisans, Kimya (2021-2026)</p>
+
+        <p class="ozet-metin">
+            Lisans eğitimim boyunca, Organik Kimya Anabilim Dalı Araştırma Laboratuvarı'nda görev aldım. 
+            TÜBİTAK 2209-A Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı kapsamında desteklenen, 
+            Organik Kimya Anabilim Dalı kapsamında bir araştırma projesinin yürütücülüğünü yapmaktayım.
+        </p>
+
+  
     </div>
 
-    <p class="hareketli-cizgi" style="text-align: center; display: block; margin: 0 auto 10px auto; width: max-content;">Lisans, Kimya (2021-2026)</p>
+   <div class="ust-cerceve">
     
-    <p class="ozet-metin" style="text-align: center; font-size: 14px; color: #555; line-height: 1.6; margin: 0;">
-        Lisans eğitimim boyunca, Organik Kimya Anabilim Dalı Araştırma Laboratuvarı'nda görev aldım. 
-        TÜBİTAK 2209-A Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı kapsamında desteklenen, 
-        Organik Kimya Anabilim Dalı kapsamında bir araştırma projesinin yürütücülüğünü yapmaktayım.
-    </p>
-</div>
+    <!-- YÜKSEK LİSANS LOGOSU: Ana çerçevenin hemen içine, en sağ üst köşeye kilitlenmesi için buraya aldık -->
+    <img src="ankara-universitesi-logo-png_seeklogo-306482.png" class="uni-logo-kose" alt="Logo">
 
- <div class="ust-cerceve" style="position: relative; padding: 20px; border-radius: 12px; background-color: #ffffff; margin-bottom: 20px;">
-    
-    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; width: 100%;">
-        <img src="ankara-universitesi-logo-png_seeklogo-306482.png" alt="Logo" style="width: 30px; height: auto; flex-shrink: 0;">
-        <h4 style="font-size: 18px; color: #222; margin: 0; font-weight: bold; text-align: center;">Ankara Üniversitesi</h4> 
-        <img src="268703.png" alt="benzen" style="width: 25px; height: auto; flex-shrink: 0;">
+    <div class="kapsayici-kutu">
+        <h4>Ankara Üniversitesi</h4>
+        <img src="268703.png" alt="benzen" width="25"> <br><br><br><br><br>
     </div>
 
-    <p class="hareketli-cizgi" style="text-align: center; display: block; margin: 0 auto 10px auto; width: max-content;">Yüksek Lisans, Organik Kimya (2026-)</p>
+    <p class="hareketli-cizgi">Yüksek Lisans, Organik Kimya (2026-)</p>
+
 </div>
+      
 
     
 <hr style="width: 200%; margin: 20px auto; border: none; height: 1px; background-color: #ccc;"><br>
@@ -539,9 +538,14 @@
 <style>
 
 
-/* Kartların içindeki yazıların logoya çarpmasını engellemek için sol boşluk ekleyelim */
-.kapsayici-kutu {
-    padding-left: 35px !important; /* Başlığı logodan sağa doğru kaydırır, asil gösterir */
+/* Bu kod zaten style etiketlerinin içindeyse yeniden eklemene gerek yok, aynen geçerli olacak */
+.uni-logo-kose {
+    position: absolute !important;
+    top: 14px !important;    /* İlk kartta en son beğendiğin ideal yükseklik payı */
+    right: 24px !important;  /* Sağ köşeden milimetrik hizalama */
+    width: 35px !important;  
+    height: auto !important;
+    z-index: 99 !important;  
 }
 
 /* Logonun sınırını belirleyen ana beyaz kart */
