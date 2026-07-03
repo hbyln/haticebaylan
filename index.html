@@ -900,6 +900,26 @@
         width: 100% !important;
         box-sizing: border-box !important;
     }
+/* Mobilde resimlerin ve logoların iç içe geçmesini engeller */
+    .ust-cerceve img {
+        position: static !important; /* Eğer absolute verilmişse bunu iptal eder */
+        display: inline-block !important;
+        max-width: 40px !important; /* Logoların mobilde çok devasa olmasını önler */
+        height: auto !important;
+        margin: 5px !important; /* Resimlerin arasına güvenli boşluk bırakır */
+    }
+
+    /* Eğer logoları tutan ayrı bir kutun varsa, mobilde onları alt alta veya düzgünce yan yana dizer */
+    .ust-cerceve div {
+        position: static !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+
+
 }
 </style>
 
