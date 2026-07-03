@@ -818,10 +818,14 @@
     }
 
     /* Kartların mobilde kutudan taşmasını önler, jilet gibi hizalar */
-    .ust-cerceve, .kart, .blog-kart {
-        width: 100% !important;
-        margin: 10px 0 !important;
-        box-sizing: border-box !important;
+    /* Sitenin tüm içeriğini saran ana çerçeve/konteyner sınıfı hangisiyse onu bulun */
+.ust-cerceve { /* Eğer sınıf adı farklıysa burayı kendi sınıfınla değiştir kanka */
+    width: 100% !important;
+    max-width: 650px !important; /* Sitenin masaüstünde maksimum ne kadar geniş olacağını belirler, ideali budur */
+    margin: 0 auto !important; /* 🌟 İŞTE SİHRİ YAPAN SATIR: Sağı ve solu otomatik eşitleyerek içeriği HER ekranda tam ortalar */
+    box-sizing: border-box !important;
+    padding: 20px !important; /* Kenarlardan taşmayı önlemek için iç boşluk */
+
     }
 
     /* Yazıların sola kaymasını engelleyip ortalayan kesin komut */
@@ -835,44 +839,70 @@
 </style>
 
 <style>
-/* 📱 MOBİL UYUMLULUK AYARLARI (Ekran genişliği 768px ve altı için geçerli) */
+    /* 📱 GENEL MOBİL AYARLARI (768px ve altı telefonlar için taşmayı önleyen kesin kod) */
 @media (max-width: 768px) {
     
-    /* Yan yana duran tüm kart yapılarını alt alta sıralar */
-    .egitim-alani, .ust-cerceve, .kapsayici-ana-div, [class*="konteyner"] {
-        display: flex !important;
-        flex-direction: column !important; /* Kartları yan yana değil alt alta dizer */
-        width: 100% !important;            /* Ekranı tam kaplamasını sağlar */
+    /* Sayfanın sağa kaymasını ve taşmasını kökten engeller */
+    html, body {
+        width: 100% !important;
         max-width: 100% !important;
-        padding: 15px !important;          /* Mobilde taşma yapmasın diye iç boşluk */
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Üst taraftaki etiketlerin (Ankara ve Yeşil kutu) alt alta gelip ortalanmasını sağlar */
+    .etiket-satiri {
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+        margin: 15px auto !important;
+        text-align: center !important;
+    }
+
+    .dikey-cizgi {
+        display: none !important; /* Mobilde aradaki dikey çizgiyi gizler */
+    }
+
+    /* Üst menüyü mobil ekrana tam sığdırır */
+    .ust-menu {
+        grid-template-columns: 50px 1fr 50px !important;
+        padding: 10px !important;
+        width: 90% !important;
+    }
+    
+    .dropdown-blog-kart, .dropdown-spotify-kart {
+        width: 290px !important;
+    }
+    
+    /* Eğitim kartlarını ve kapsayıcıları tam genişlik yapıp taşmayı önler */
+    .egitim-alani, .ust-cerceve, [class*="konteyner"] {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px !important;
         box-sizing: border-box !important;
     }
 
-    /* Eğitim kartlarının (Ankara Üniversitesi yazan o iki büyük beyaz kartın) mobildeki genişliği */
     .ust-cerceve {
-        width: 100% !important;
-        margin-bottom: 20px !important;    /* Alt alta gelince aralarında boşluk bırakır */
+        margin: 10px 0 !important;
     }
 
-    /* Üst taraftaki özet biyografi metninin mobildeki hizası */
-    .ozet-metin, p {
-        font-size: 14px !important;        /* Küçük ekranlarda okunabilir ideal yazı boyutu */
-        line-height: 1.6 !important;
-        text-align: justify !important;    /* Yazıları sağa ve sola şıkça yaslar */
-    }
-
-    /* Logoların kartın en sağ köşesinde sabit kalması için */
-    .uni-logo-kose {
-        top: 15px !important;
-        right: 15px !important;
-        width: 32px !important;            /* Mobilde biraz daha kibar dursun */
-    }
-    
-    /* İletişim (Bana Ulaşın) formunun mobilde ekranı taşırmaması için */
-    .iletisim-konteyner {
-        width: 95% !important;
+    /* Sayfadaki tüm ince çizgilerin ekranı sağa ittirmesini engeller */
+    hr {
+        width: 80% !important;
+        max-width: 80% !important;
         margin: 20px auto !important;
-        padding: 20px !important;
+    }
+
+    /* Yazıların ve başlıkların mobilde jilet gibi ortalanması */
+    h1, h2, h3, h4, p, .ozet-metin {
+        text-align: center !important; 
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 }
 </style>
