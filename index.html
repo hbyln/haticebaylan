@@ -66,7 +66,60 @@
 
 <style>
 
+/* Üst Menü / Bar Kısmı */
+.header-container {
+    width: 100%;
+    max-width: 100%; /* Sınırlandırma varsa kaldırıyoruz */
+    padding: 10px 20px; /* İçeriden hafif boşluk, ilk görseldeki gibi */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee; /* İlk görseldeki gibi ince ayırıcı çizgi */
+}
 
+/* Konum ve Durum Butonunu Kapsayan Ana Kutu */
+.profile-info-sub {
+    display: flex;
+    flex-direction: column; /* Elemanları alt alta dizer */
+    align-items: center;    /* Yatayda ortalar */
+    gap: 12px;              /* Aralarındaki boşluk */
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+/* Yeşil Butonun Kendisi */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    /* Renkler ilk görseldeki tona oldukça yakın */
+    background-color: #e8f5e9; 
+    color: #2e7d32;
+}
+/* Mobil Ekranlar İçin Özel Ayarlar (Media Query) */
+@media (max-width: 768px) {
+    
+    /* Hakkımda paragraf yazısı */
+    .about-text p {
+        font-size: 16px;         /* Hayvan gibi büyük durmasını engeller, ideal mobil boyutu */
+        line-height: 1.6;        /* Satır arası boşluğu rahat okunması için dengeler */
+        color: #333333;          /* İlk görseldeki gibi hafif yumuşak bir siyah */
+        text-align: center;      /* İlk görseldeki gibi metni ortalar */
+        padding: 0 15px;         /* Sağdan soldan ekrana yapışmasın diye hafif boşluk */
+    }
+    
+    /* Eğer "Ben Hatice Baylan" başlığı da büyük kalıyorsa: */
+    .profile-title {
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
 
 /* Sol taraftaki ikon kutusunun ayarları */
 .akademik-sol-ikon {
