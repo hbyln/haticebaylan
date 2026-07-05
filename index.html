@@ -101,26 +101,35 @@
     color: #2e7d32;
 }
 /* Mobil Ekranlar İçin Özel Ayarlar (Media Query) */
-@media (max-width: 768px) {
-    
-    /* Hakkımda paragraf yazısı */
-    .about-text p {
-        font-size: 16px;         /* Hayvan gibi büyük durmasını engeller, ideal mobil boyutu */
-        line-height: 1.6;        /* Satır arası boşluğu rahat okunması için dengeler */
-        color: #333333;          /* İlk görseldeki gibi hafif yumuşak bir siyah */
-        text-align: center;      /* İlk görseldeki gibi metni ortalar */
-        padding: 0 15px;         /* Sağdan soldan ekrana yapışmasın diye hafif boşluk */
+.ust-menu {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;             /* Dış boşlukları sıfırlayıp tam üste yapıştırır */
+        border-radius: 0 !important;           /* Kenar yuvarlaklıklarını kaldırır */
+        border-left: none !important;
+        border-right: none !important;
+        border-top: none !important;
+        border-bottom: 1px solid #eee !important; /* Alta şık hafif bir çizgi çeker */
+        padding: 12px 16px !important;         /* İç boşluğu mobil için dengeler */
+        
+        /* Sayfa kaydırıldıkça üst barın yukarıda sabit kalmasını istersen alttaki iki satırı açabilirsin:
+        position: fixed !important;
+        top: 0;
+        z-index: 100000 !important; */
     }
-    
-    /* Eğer "Ben Hatice Baylan" başlığı da büyük kalıyorsa: */
-    .profile-title {
-        font-size: 28px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-}
 
+    /* Açılır pencerelerin (Dropdown) mobilde taşmaması için konumlandırma */
+    .dropdown-blog-kart {
+        width: calc(100vw - 20px) !important;  /* Ekran genişliğine göre esner */
+        left: 10px !important;
+        right: 10px !important;
+    }
+
+    .dropdown-spotify-kart {
+        width: calc(100vw - 20px) !important;
+        left: 10px !important;
+        right: 10px !important;
+    }
 /* Sol taraftaki ikon kutusunun ayarları */
 .akademik-sol-ikon {
     width: 40px !important;
