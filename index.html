@@ -832,5 +832,62 @@ html, body {
 }
 </style>
 
+<script>
+    (function() {
+        var t = 'dark';
+        try {
+            t = localStorage.getItem('theme') || 'dark';
+        } catch (e) {
+            t = 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.style.colorScheme = t;
+        var colors = { dark: '#0e0e0e', light: '#f5f5f5' };
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', colors[t] || colors.dark);
+    })();
+</script>
+
+<style>
+/* Varsayılan olarak Koyu Tema (Dark Mod) */
+:root, [data-theme="dark"] {
+    --arka-plan: #0e0e0e;
+    --yazi-rengi: #ffffff;
+    --ara-renk: #1a1a1a;
+}
+
+/* Açık Tema (Light Mod) */
+[data-theme="light"] {
+    --arka-plan: #f5f5f5;
+    --yazi-rengi: #1a1a1a;
+    --ara-renk: #ffffff;
+}
+
+/* Renkleri sitende kullanırken: */
+body {
+    background-color: var(--arka-plan);
+    color: var(--yazi-rengi);
+}
+</style>
+
+<button id="theme-toggle">Temayı Değiştir</button>
+
+<script>
+    const button = document.getElementById('theme-toggle');
+    button.addEventListener('click', () => {
+        // Mevcut temayı kontrol et
+        let currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        // Yeni temayı uygula ve kaydet
+        document.documentElement.setAttribute('data-theme', newTheme);
+        document.documentElement.style.colorScheme = newTheme;
+        localStorage.setItem('theme', newTheme);
+        
+        // Tarayıcı adres çubuğu rengini güncelle
+        var colors = { dark: '#0e0e0e', light: '#f5f5f5' };
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', colors[newTheme]);
+    });
+</script>
+
 </body>
 </html>
