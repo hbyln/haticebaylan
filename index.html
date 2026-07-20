@@ -767,28 +767,32 @@
 
 
 <div class="sosyal-medya-kutusu">
-    <a href="https://instagram.com/htcbylnh" target="_blank" class="sosyal-link insta">
-        <i class="fab fa-instagram"></i>
-
-    </a>
+ 
 
      <a href="https://orcid.org/0009-0005-0100-8877" target="_blank" class="sosyal-link insta">
         <i class="fab fa-orcid"></i>
 
     </a>
+
+   <a href="https://instagram.com/htcbylnh" target="_blank" class="sosyal-link insta">
+        <i class="fab fa-instagram"></i>
+
+    </a>
+
     <a href="https://linkedin.com/in/hatice-baylan-b25ab4235" target="_blank" class="sosyal-link linkedin">
         <i class="fab fa-linkedin-in"></i>
     </a>
     
-    <a href="https://github.com/hbyln" target="_blank" class="sosyal-link github">
-        <i class="fab fa-github"></i>
-    </a>
+   
 
 
     <a href="https://medium.com/@bylnhtc3" target="_blank" class="sosyal-link medium">
         <i class="fab fa-medium"></i>
     </a>
 
+     <a href="https://github.com/hbyln" target="_blank" class="sosyal-link github">
+        <i class="fab fa-github"></i>
+    </a>
 
      <a href="https://discord.com/users/1080608096465977476" target="_blank" class="sosyal-link medium">
         <i class="fab fa-discord"></i>
@@ -832,75 +836,7 @@ html, body {
 }
 </style>
 
-<style>/* Varsayılan olarak Koyu Tema (Dark Mod) */
-:root, [data-theme="dark"] {
-    --arka-plan: #0e0e0e;
-    --yazi-rengi: #ffffff; /* Koyu modda yazılar beyaz olur */
-    --ara-renk: #1a1a1a;
-}
 
-/* Açık Tema (Light Mod) */
-[data-theme="light"] {
-    --arka-plan: #f5f5f5;
-    --yazi-rengi: #1a1a1a; /* Açık modda yazılar koyu gri/siyah olur */
-    --ara-renk: #ffffff;
-}
 
-/* Tüm sitenin bu renk değişkenlerini kullanması şart: */
-body {
-    background-color: var(--arka-plan);
-    color: var(--yazi-rengi);
-    transition: background-color 0.3s ease, color 0.3s ease; /* Yumuşak geçiş efekti */
-}
-
-/* Sağ Üstteki Ay/Güneş Butonunun Stili */
-#theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999; /* Her şeyin üstünde görünsün */
-    
-    background: var(--ara-renk);
-    color: var(--yazi-rengi);
-    border: 1px solid var(--yazi-rengi);
-    padding: 10px 14px;
-    border-radius: 50%; /* Tam yuvarlak ay butonu */
-    cursor: pointer;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: all 0.2s ease;
-}
-
-#theme-toggle:hover {
-    transform: scale(1.1); /* Üzerine gelince hafifçe büyüsün */
-}</style>
-
-<!-- Sağ üstte duracak olan Ay butonu -->
-<button id="theme-toggle" aria-label="Tema Değiştir">🌙</button>
-
-<script>
-    const button = document.getElementById('theme-toggle');
-    
-    // Sayfa ilk açıldığında butonun ikonunu mevcut temaya göre eşitleyelim
-    let initialTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-    button.textContent = initialTheme === 'dark' ? '🌙' : '☀️';
-
-    button.addEventListener('click', () => {
-        let currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-        let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        // Temayı ve ikonları güncelle
-        document.documentElement.setAttribute('data-theme', newTheme);
-        document.documentElement.style.colorScheme = newTheme;
-        localStorage.setItem('theme', newTheme);
-        
-        // Butonun içindeki emojiyi değiştir
-        button.textContent = newTheme === 'dark' ? '🌙' : '☀️';
-        
-        // Tarayıcı sekme/adres çubuğu rengini güncelle
-        var colors = { dark: '#0e0e0e', light: '#f5f5f5' };
-        document.querySelector('meta[name="theme-color"]').setAttribute('content', colors[newTheme]);
-    });
-</script>
 </body>
 </html>
